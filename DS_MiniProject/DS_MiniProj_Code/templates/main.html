@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>Water Quality </title>
+
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: -webkit-linear-gradient(to right , #434343 , #000000);
+
+}
+
+.containeer{
+    display: flex;
+    flex-flow: column;
+    height: 70%;
+    align-items: space-around;
+    justify-content: center;
+    color: whitesmoke;
+
+} 
+
+h1{
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+    margin-top: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h2{
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 40px;
+}
+
+.userinput{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+
+}
+
+input{
+    margin: 20px;
+    height: 40px;
+    width: 10%;
+    text-align: center;
+    border: #434343;
+    border-radius: 5px;
+    font-family: arimo;
+    font-size: 1.1rem;
+    background: whitesmoke;
+    
+
+    
+}
+
+.alphabets{
+    color:black;
+    font-size: 20px;
+    padding-bottom: 0px;
+
+}
+
+
+</style>
+
+
+</head>
+
+<body background="water1.jpg">
+    <h1>Service</h1>
+    <div class="containeer">
+        <div class="alphabets">
+            <p>&ensp; &ensp;&ensp; &ensp;pH Level &ensp;&ensp;&ensp;&ensp;&ensp; Hardness Level &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Solids
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Chloramines&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sulfate
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Conductivity&ensp;&ensp;&ensp;&ensp;&ensp;Organic_carbon
+                &ensp;&ensp;&ensp;&ensp;Trihalomethanes
+            </p>
+        <div class="userinput" >
+            <form method="post" action="/predict"></form>
+            <input name = "pH" type="number" maxlength="5">
+            <input name = "Hardness" type="number" maxlength="5">
+            <input name = "Solids" type="number" maxlength="5">
+            <input name = "Chloramines" type="number" maxlength="5">
+            <input name = "Sulfate" type="number" maxlength="5">
+            <input name ="Conductivity" type="number" maxlength="5">
+            <input name = "Organic_carbon" type="number" maxlength="5">
+            <input name = "Trihalomethanes" type="number" maxlength="5">
+            <input name = "pH" type="number" maxlength="5">
+            <input name = "Hardness" type="number" maxlength="5">
+            <input name = "Solids" type="number" maxlength="5">
+            <input name = "Chloramines" type="number" maxlength="5">
+            <input name = "Sulfate" type="number" maxlength="5">
+            <input name ="Conductivity" type="number" maxlength="5">
+            <input name = "Organic_carbon" type="number" maxlength="5">
+            <input name = "Trihalomethanes" type="number" maxlength="5">
+            <input name = "pH" type="number" maxlength="5">
+            <input name = "Hardness" type="number" maxlength="5">
+            <input name = "Solids" type="number" maxlength="5">
+            <input name = "Chloramines" type="number" maxlength="5">
+            <input name = "Sulfate" type="number" maxlength="5">
+            <input name ="Conductivity" type="number" maxlength="5">
+            <input name = "Organic_carbon" type="number" maxlength="5">
+            <input name = "Trihalomethanes" type="number" maxlength="5">
+        </div>
+
+        </div>
+        <input type="submit" value ="Predict">
+  
+         {% if result %}
+        <p>{{ result }}</p>
+    {% endif %} 
+    </div>
+</body>
+</html>
+

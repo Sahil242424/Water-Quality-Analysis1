@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Purity Classifier</title>
+<style>
+
+h1{
+    background-color:rgb(116, 153, 167);
+    text-align: center;
+    margin-top: 0px;
+    margin-left:0px;
+}
+
+h4{
+    text-align: center;
+
+}
+
+form{
+    margin-left: 40%;
+    font-size: 1.1rem;
+    width: 5px;
+    text-align: center;
+
+}
+
+.last{
+    margin-left:50px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+
+ddform{
+    margin: 50px;
+    height: 40px;
+    width: 8%;
+    border: none;
+    border-radius: 10px;
+    font-family: Times New Roman;
+    font-size: 1.1rem;
+    background: #eef2f3;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body background="W1.jpg">
+    <h1>Water Purity Classifier</h1>
+    
+    <h4>Note : This project can be used by professionals only</h4>
+
+    <form method="post" action="/predict">
+        <label>pH Level: </label>
+        <input type="number" name="pH"><br><br>
+        <label>Hardness Level: </label>
+        <input type="number" name="Hardness"><br><br>
+        <label>Solids: </label>
+        <input type="number" name="Solids"><br><br>
+        <label>Chloramines: </label>
+        <input type="number" name="Chloramines"><br><br>
+        <label>Sulfate: </label>
+        <input type="number" name="Sulfate"><br><br>
+        <label>Conductivity: </label>
+        <input type="number" name="Conductivity"><br><br>
+        <label>Organic_carbon: </label>
+        <input type="number" name="Organic_carbon"><br><br>
+        <label>Trihalomethanes: </label>
+        <input type="number" name="Trihalomethanes"><br><br>
+        <label>Turbidity: </label>
+        <input type="number" name="Turbidity"><br><br>
+
+        <input type="submit" value ="Predict"><br><br>
+    </form>
+<div class="last">
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</div>
+</body>
+</html>
